@@ -22,7 +22,7 @@ Pino 5: Conectado ao sensor Hall do Velocímetro.
 As conexões devem ser feitas com os sensores ligados aos pinos apropriados e, se necessário, com resistores para garantir leituras adequadas.
 
 ## Instruções para Compilação e Upload
-###Instale o ESP32 na IDE Arduino:
+### Instale o ESP32 na IDE Arduino:
 
 Vá para Arquivo > Preferências e adicione o seguinte URL na seção de URLs adicionais:
 arduino
@@ -39,3 +39,44 @@ Carregue o código para o ESP32.
 ### Monitor Serial:
 
 Abra o Monitor Serial para visualizar a conexão WiFi e os dados.
+
+## Configuração do Postman
+### Passos para Importar a Coleção no Postman
+Abra o Postman.
+Clique em Import no canto superior esquerdo.
+Selecione o arquivo ESP32_Postman_Collection.json.
+Após a importação, você verá dois endpoints configurados:
+Obter RPM (GET /rpm)
+Obter Velocidade (GET /velocidade)
+### Exemplo de Requisição GET
+URL: http://<ESP32_IP>/rpm
+
+Método: GET
+Retorna o valor atual de RPM.
+### URL: http://<ESP32_IP>/velocidade
+
+Método: GET
+Retorna o valor atual de velocidade.
+### Nota: Substitua  <ESP32_IP>  pelo endereço IP do ESP32, que será exibido no Monitor Serial após a conexão Wi-Fi.
+Certifique-se de que o IP do ESP32 (192.168.1.100) está correto ou altere o IP no Postman conforme o IP do seu ESP32 na sua rede local.
+
+## Passo a Passo para Importar o Arquivo JSON no Postman:
+### Baixe o arquivo:
+
+Baixar: ESP32_Postman_Collection.json
+### Abra o Postman no seu computador.
+
+### Importe a Coleção:
+
+Na interface do Postman, clique em Import no topo da interface.
+Selecione a aba File.
+Clique em Choose Files e navegue até o arquivo ESP32_Postman_Collection.json que você baixou.
+Clique em Open e, em seguida, em Import.
+### Use a Coleção:
+
+Após a importação, você verá dois endpoints configurados na sua coleção:
+Obter RPM (GET /rpm)
+Obter Velocidade (GET /velocidade)
+Basta clicar em qualquer um dos endpoints e depois clicar em Send para enviar a requisição ao ESP32.
+
+
