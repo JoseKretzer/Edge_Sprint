@@ -79,4 +79,10 @@ Obter RPM (GET /rpm)
 Obter Velocidade (GET /velocidade)
 Basta clicar em qualquer um dos endpoints e depois clicar em Send para enviar a requisição ao ESP32.
 
+### Integrantes do grupo:
+JOSE ANTONIO KRETZER RODRIGUEZ (RM: 555523)
+VICTOR ALVES DE SOUZA (RM: 555761)
+GUSTAVO YUJI OSUGI (RM:555034)
+RENATO DUTRA FERREIRA DE AGUIAR (RM:554716)
+
 
