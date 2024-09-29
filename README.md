@@ -57,7 +57,8 @@ Retorna o valor atual de RPM.
 
 Método: GET
 Retorna o valor atual de velocidade.
-### Nota: Substitua  <ESP32_IP>  pelo endereço IP do ESP32, que será exibido no Monitor Serial após a conexão Wi-Fi.
+### Nota: 
+Substitua  <ESP32_IP>  pelo endereço IP do ESP32, que será exibido no Monitor Serial após a conexão Wi-Fi.
 Certifique-se de que o IP do ESP32 (192.168.1.100) está correto ou altere o IP no Postman conforme o IP do seu ESP32 na sua rede local.
 
 ## Passo a Passo para Importar o Arquivo JSON no Postman:
