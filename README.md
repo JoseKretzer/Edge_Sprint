@@ -4,6 +4,28 @@ Este documento descreve os recursos necessários para implementar uma solução 
 ## Descrição do Projeto
 Este projeto tem como objetivo monitorar dados em tempo real de RPM e Velocidade de um dispositivo conectado, enviando as informações coletadas para um broker MQTT via um ESP32. Os dados são então disponibilizados para consumo por um sistema de back-end e podem ser visualizados em uma interface front-end.
 
+## Back-end
+### Broker MQTT:
+
+Um broker MQTT (como Mosquitto ou HiveMQ) para receber as publicações dos dados de RPM e Velocidade enviados pelo ESP32.
+Exemplo de broker usado: 46.17.108.113 na porta 1883.
+### Servidor:
+
+Um servidor para processar as mensagens MQTT e armazenar/monitorar os dados recebidos.
+Pode ser configurado com Node.js, Python, ou outras linguagens compatíveis com MQTT.
+### Banco de Dados (opcional):
+
+Se necessário, um banco de dados para armazenar os dados históricos de RPM e Velocidade para análise futura.
+
+## Front-end
+### Postman (ou outra interface de testes HTTP/MQTT):
+
+Para testar e monitorar as requisições HTTP e as mensagens MQTT.
+Pode ser substituído por uma interface web personalizada.
+### Dashboard IoT (opcional):
+
+Um dashboard para visualização em tempo real dos dados de RPM e Velocidade, com gráficos e alertas. Pode ser construído usando Node-RED, Grafana, ou React.js.
+
 ## Componentes Necessários:
 ### Hardware
 ESP32: O microcontrolador que executa o código.
