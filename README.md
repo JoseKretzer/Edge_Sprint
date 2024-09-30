@@ -1,5 +1,8 @@
 # ESP32 RPM e Velocidade WebServer com Integração Postman
-Este projeto utiliza um ESP32 para monitorar a Rotação por Minuto (RPM) e a Velocidade de um sistema com sensores Hall. Os dados são enviados para um broker MQTT e podem ser acessados e gerenciados via Postman ou outros clientes MQTT.
+Este documento descreve os recursos necessários para implementar uma solução IoT que monitora Rotação por Minuto (RPM) e Velocidade de um dispositivo (como um veículo), com coleta de dados via ESP32, envio para um broker MQTT (back-end), e uma interface para monitoramento e controle (front-end).
+
+## Descrição do Projeto
+Este projeto tem como objetivo monitorar dados em tempo real de RPM e Velocidade de um dispositivo conectado, enviando as informações coletadas para um broker MQTT via um ESP32. Os dados são então disponibilizados para consumo por um sistema de back-end e podem ser visualizados em uma interface front-end.
 
 ## Componentes Necessários:
 ### Hardware
