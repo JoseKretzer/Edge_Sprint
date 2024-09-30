@@ -53,22 +53,26 @@ As conexões devem ser feitas com os sensores ligados aos pinos apropriados e, s
 O Postman será usado para testar as requisições e as respostas do broker MQTT. Para configurar o Postman e simular a comunicação com o ESP32, siga os passos abaixo:
 ### Passo a Passo:
 Abra o Postman e clique em Import.
+
 Importe o arquivo Postman Collection que contém os endpoints de publicação e monitoramento de RPM e Velocidade.
+
 Configure as variáveis necessárias, como a URL do broker MQTT e os tópicos (/TEF/xxx001/attrs/rpm e /TEF/xxx001/attrs/velocidade).
+
 Envie requisições GET para os tópicos e verifique as respostas dos valores de RPM e Velocidade.
 
 ## Passo a Passo para Importar o Arquivo JSON no Postman:
-### Baixe o arquivo:
+### Baixe o arquivo: FIWARE Descomplicado.postman_collection
 
-Baixar: ESP32_Postman_Collection.json
+Baixar: 
 ### Abra o Postman no seu computador.
 
 ### Importe a Coleção:
 
 Na interface do Postman, clique em Import no topo da interface.
 Selecione a aba File.
-Clique em Choose Files e navegue até o arquivo ESP32_Postman_Collection.json que você baixou.
+Clique em Choose Files e navegue até o arquivo FIWARE Descomplicado.postman_collection que você baixou.
 Clique em Open e, em seguida, em Import.
+
 ### Use a Coleção:
 
 Após a importação, você verá dois endpoints configurados na sua coleção:
