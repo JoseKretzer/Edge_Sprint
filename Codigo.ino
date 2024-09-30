@@ -6,8 +6,8 @@ const char* default_SSID = "Wokwi-GUEST"; // Nome da rede Wi-Fi
 const char* default_PASSWORD = ""; // Senha da rede Wi-Fi
 const char* default_BROKER_MQTT = "46.17.108.113"; // IP do Broker MQTT
 const int default_BROKER_PORT = 1883; // Porta do Broker MQTT
-const char* default_TOPICO_PUBLISH_RPM = "/TEF/xxx001/attrs/rpm"; // Tópico MQTT para RPM
-const char* default_TOPICO_PUBLISH_VELOCIDADE = "/TEF/xxx001/attrs/velocidade"; // Tópico MQTT para Velocidade
+const char* default_TOPICO_PUBLISH_RPM = "/TEF/Vehicle001/attrs/rpm"; // Tópico MQTT para RPM
+const char* default_TOPICO_PUBLISH_VELOCIDADE = "/TEF/Vehicle001/attrs/velocidade"; // Tópico MQTT para Velocidade
 const char* default_ID_MQTT = "fiware_001"; // ID MQTT
  
 // Pinos dos sensores
