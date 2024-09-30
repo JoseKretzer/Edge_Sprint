@@ -26,7 +26,7 @@ Pode ser substituído por uma interface web personalizada.
 
 Um dashboard para visualização em tempo real dos dados de RPM e Velocidade, com gráficos e alertas. Pode ser construído usando Node-RED, Grafana, ou React.js.
 
-## Componentes Necessários:
+## Requisitos e Dependências:
 ### Hardware
 ESP32: O microcontrolador que executa o código.
 Sensores Hall: Para medir a rotação (RPM) e a velocidade.
