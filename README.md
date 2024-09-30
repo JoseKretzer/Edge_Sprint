@@ -1,5 +1,5 @@
 # ESP32 RPM e Velocidade WebServer com Integração Postman
-Este projeto utiliza um ESP32 para medir e monitorar a Rotação por Minuto (RPM) e a Velocidade de um sistema com sensores. Os dados são expostos via um servidor web, permitindo acessá-los através de uma interface HTTP.
+Este projeto utiliza um ESP32 para monitorar a Rotação por Minuto (RPM) e a Velocidade de um sistema com sensores Hall. Os dados são enviados para um broker MQTT e podem ser acessados e gerenciados via Postman ou outros clientes MQTT.
 
 ## Componentes Necessários:
 ### Hardware
@@ -10,56 +10,27 @@ Resistores: Para uso com os sensores, conforme necessário.
 
 ### Software
 Arduino IDE: Para programar o ESP32.
-#### Bibliotecas:
-WiFi.h: Para gerenciar a conexão Wi-Fi.
-WebServer.h: Para criar o servidor HTTP.
+Postman: Para realizar testes e monitorar as requisições.
+Broker MQTT: Um broker MQTT (por exemplo, Mosquitto ou o IP 46.17.108.113 usado no código).
+
+### Bibliotecas Necessárias
+WiFi.h: Para conectar o ESP32 à rede Wi-Fi.
+PubSubClient.h: Para comunicação via MQTT.
 
 ## Configuração do Hardware
 ### Componentes Principais
-Pino 18: Conectado ao sensor Hall do RPM.
-Pino 5: Conectado ao sensor Hall do Velocímetro.
+Pino 18 (ESP32): Conectado ao sensor Hall para medir o RPM.
+Pino 5 (ESP32): Conectado ao sensor Hall para medir a Velocidade.
 ### Diagrama de Ligação
 As conexões devem ser feitas com os sensores ligados aos pinos apropriados e, se necessário, com resistores para garantir leituras adequadas.
 
-## Instruções para Compilação e Upload
-### Instale o ESP32 na IDE Arduino:
-
-Vá para Arquivo > Preferências e adicione o seguinte URL na seção de URLs adicionais:
-arduino
-Copiar código
-https://dl.espressif.com/dl/package_esp32_index.json
-Em Ferramentas > Gerenciador de Placas, instale o pacote ESP32.
-###Instale as bibliotecas necessárias:
-
-Instale as bibliotecas ESPAsyncWebServer e AsyncTCP via o Gerenciador de Bibliotecas da IDE Arduino.
-### Compilação e Upload:
-
-Conecte o ESP32 ao computador e selecione a porta correta.
-Carregue o código para o ESP32.
-### Monitor Serial:
-
-Abra o Monitor Serial para visualizar a conexão WiFi e os dados.
-
 ## Configuração do Postman
-### Passos para Importar a Coleção no Postman
-Abra o Postman.
-Clique em Import no canto superior esquerdo.
-Selecione o arquivo ESP32_Postman_Collection.json.
-Após a importação, você verá dois endpoints configurados:
-Obter RPM (GET /rpm)
-Obter Velocidade (GET /velocidade)
-### Exemplo de Requisição GET
-URL: http://<ESP32_IP>/rpm
-
-Método: GET
-Retorna o valor atual de RPM.
-### URL: http://<ESP32_IP>/velocidade
-
-Método: GET
-Retorna o valor atual de velocidade.
-### Nota: 
-Substitua  <ESP32_IP>  pelo endereço IP do ESP32, que será exibido no Monitor Serial após a conexão Wi-Fi.
-Certifique-se de que o IP do ESP32 (192.168.1.100) está correto ou altere o IP no Postman conforme o IP do seu ESP32 na sua rede local.
+O Postman será usado para testar as requisições e as respostas do broker MQTT. Para configurar o Postman e simular a comunicação com o ESP32, siga os passos abaixo:
+### Passo a Passo:
+Abra o Postman e clique em Import.
+Importe o arquivo Postman Collection que contém os endpoints de publicação e monitoramento de RPM e Velocidade.
+Configure as variáveis necessárias, como a URL do broker MQTT e os tópicos (/TEF/xxx001/attrs/rpm e /TEF/xxx001/attrs/velocidade).
+Envie requisições GET para os tópicos e verifique as respostas dos valores de RPM e Velocidade.
 
 ## Passo a Passo para Importar o Arquivo JSON no Postman:
 ### Baixe o arquivo:
