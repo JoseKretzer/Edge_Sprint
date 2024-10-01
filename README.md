@@ -40,6 +40,7 @@ Broker MQTT: Um broker MQTT (por exemplo, Mosquitto ou o IP 46.17.108.113 usado 
 
 ### Bibliotecas Necessárias
 WiFi.h: Para conectar o ESP32 à rede Wi-Fi.
+
 PubSubClient.h: Para comunicação via MQTT.
 
 ## Configuração do Hardware
