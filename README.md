@@ -21,10 +21,13 @@ Se necessário, um banco de dados para armazenar os dados históricos de RPM e V
 ### Postman (ou outra interface de testes HTTP/MQTT):
 
 Para testar e monitorar as requisições HTTP e as mensagens MQTT.
+
 Pode ser substituído por uma interface web personalizada.
 ### Dashboard IoT (opcional):
 
-Um dashboard para visualização em tempo real dos dados de RPM e Velocidade, com gráficos e alertas. Pode ser construído usando Node-RED, Grafana, ou React.js.
+Um dashboard para visualização em tempo real dos dados de RPM e Velocidade, com gráficos e alertas. 
+
+Pode ser construído usando Node-RED, Grafana, ou React.js.
 
 ## Requisitos e Dependências:
 ### Hardware
