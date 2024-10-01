@@ -61,9 +61,9 @@ Configure as variáveis necessárias, como a URL do broker MQTT e os tópicos (/
 Envie requisições GET para os tópicos e verifique as respostas dos valores de RPM e Velocidade.
 
 ## Passo a Passo para Importar o Arquivo JSON no Postman:
-### Baixe o arquivo: FIWARE Descomplicado.postman_collection
+### Baixe o arquivo 
 
-Baixar: 
+Baixar: FIWARE Descomplicado.postman_collection
 ### Abra o Postman no seu computador.
 
 ### Importe a Coleção:
