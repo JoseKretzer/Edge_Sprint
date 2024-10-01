@@ -8,10 +8,12 @@ Este projeto tem como objetivo monitorar dados em tempo real de RPM e Velocidade
 ### Broker MQTT:
 
 Um broker MQTT (como Mosquitto ou HiveMQ) para receber as publicações dos dados de RPM e Velocidade enviados pelo ESP32.
+
 Exemplo de broker usado: 46.17.108.113 na porta 1883.
 ### Servidor:
 
 Um servidor para processar as mensagens MQTT e armazenar/monitorar os dados recebidos.
+
 Pode ser configurado com Node.js, Python, ou outras linguagens compatíveis com MQTT.
 ### Banco de Dados (opcional):
 
